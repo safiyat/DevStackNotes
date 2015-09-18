@@ -1,0 +1,30 @@
+stack.sh
+========
+
+Bash script.
+
+Installs and configures various combinations of Ceilometer, Cinder, Glance, Heat, Horizon, Keystone, Nova, Neutron, Swift.
+
+Configurations can be edited here.
+* Which git-repo to use.
+* Which services to be enabled.
+* Which OS image to use.
+
+Default values are in stackrc file.
+
+
+
+Prepare the system environment
+------------------------------
+
+Disable GREP_OPTIONS.
+
+Unset language settings. 
+Set locale to C. [http://unix.stackexchange.com/questions/87745/what-does-lc-all-c-do/87763#87763]
+Localizations (like the thousand separator or decimal point character, character set, sorting order, month, day names, currency symbol)
+The C locale is a special locale that is meant to be the simplest locale. You could also say that while the other locales are for humans, the C locale is for computers.
+You generally run a command with LC_ALL=C to avoid the user's settings to interfere with your script.
+
+Set file mode creation mask.
+
+Set path variables: PATH, TOP_DIR
